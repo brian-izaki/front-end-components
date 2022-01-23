@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from "react";
 import styles from "./styles.module.css";
-import { ShowTsxAndCss } from "..";
+// import { ShowTsxAndCss } from "..";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant: "button-primary" | "button-secondary" | "button-dark";
@@ -13,7 +13,7 @@ export const Button = ({ variant, title, ...rest }: ButtonProps) => {
       <button {...rest} className={`${styles.button}  ${styles[variant]}`}>
         <span>{title}</span>
       </button>
-
+{/* 
       <ShowTsxAndCss
         tsx={`
         import { ButtonHTMLAttributes } from "react";
@@ -142,7 +142,7 @@ export const Button = ({ variant, title, ...rest }: ButtonProps) => {
             opacity: 1;
           }
         `}
-      />
+      /> */}
     </>
   );
 };
